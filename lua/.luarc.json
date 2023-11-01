@@ -1,0 +1,27 @@
+{
+    "workspace.library": [
+        "/Users/samuel/.local/share/nvim/lazy/neodev.nvim/types/stable",
+        "/opt/homebrew/Cellar/neovim/0.9.4/share/nvim/runtime/lua",
+        "/Users/samuel/.local/share/nvim/lazy/Comment.nvim/lua",
+        "/Users/samuel/.local/share/nvim/lazy/LuaSnip/lua",
+        "/Users/samuel/.local/share/nvim/lazy/nvim-lspconfig/lua",
+        "/Users/samuel/.local/share/nvim/lazy/lazy.nvim/lua",
+        "/Users/samuel/.local/share/nvim/lazy/nvim-cmp/lua",
+        "/Users/samuel/.local/share/nvim/lazy/vim-nightfly-guicolors/lua",
+        "/Users/samuel/.local/share/nvim/lazy/cmp-nvim-lsp/lua",
+        "/Users/samuel/.local/share/nvim/lazy/nvim-treesitter-textobjects/lua",
+        "/Users/samuel/.local/share/nvim/lazy/plenary.nvim/lua",
+        "/Users/samuel/.local/share/nvim/lazy/neodev.nvim/lua",
+        "/Users/samuel/.local/share/nvim/lazy/mason-lspconfig.nvim/lua",
+        "/Users/samuel/.local/share/nvim/lazy/nvim-autopairs/lua",
+        "/Users/samuel/.local/share/nvim/lazy/dressing.nvim/lua",
+        "/Users/samuel/.local/share/nvim/lazy/mason.nvim/lua",
+        "/Users/samuel/.local/share/nvim/lazy/cmp-buffer/lua",
+        "/Users/samuel/.local/share/nvim/lazy/cmp-path/lua",
+        "/Users/samuel/.local/share/nvim/lazy/nvim-treesitter/lua",
+        "/Users/samuel/.local/share/nvim/lazy/telescope.nvim/lua",
+        "/Users/samuel/.local/share/nvim/lazy/cmp_luasnip/lua",
+        "/Users/samuel/.config/nvim/lua",
+        "${3rd}/luv/library"
+    ]
+}
