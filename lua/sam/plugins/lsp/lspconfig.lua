@@ -14,13 +14,12 @@ return {
 
 		local opts = { noremap = true, silent = true }
 
-		local on_attach = function(_, bufnr)
+		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
+		local on_attach = function(client, bufnr)
 			opts.buffer = bufnr
 
 			-- set keybinds
-			opts.desc = "Show LSP references"
-			keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
-
 			opts.desc = "Go to declaration"
 			keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
 
@@ -53,6 +52,30 @@ return {
 
 			opts.desc = "Show documentation for what is under cursor"
 			keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
+
+			opts.desc = "Organize imports"
+			local function organize_imports()
+				local params = {
+					command = "_typescript.organizeImports",
+					arguments = { vim.api.nvim_buf_get_name(bufnr) },
+					title = ""
+				}
+				vim.lsp.buf.execute_command(params)
+			end
+			keymap.set("n", "<leader>co", organize_imports, opts)
+
+			if client.supports_method("textDocument/formatting") then
+				vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+				vim.api.nvim_create_autocmd("BufWritePre", {
+					group = augroup,
+					buffer = bufnr,
+					callback = function()
+						-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
+						-- on later neovim version, you should use vim.lsp.buf.format({ async = false }) instead
+						vim.lsp.buf.format({ async = false })
+					end,
+				})
+			end
 		end
 
 		local capabilities = cmp_nvim_lsp.default_capabilities()

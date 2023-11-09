@@ -5,10 +5,10 @@ return {
 	opts = {
 		options = {
 			icons_enabled = false,
-			theme = 'nightfly',
+			theme = 'mellow',
 			component_separators = '|',
 			section_separators = '',
 		},
-		extensions = { 'neo-tree' }
+		extensions = { 'nvim-tree' }
 	},
 }

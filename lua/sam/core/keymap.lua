@@ -11,4 +11,6 @@ vim.keymap.set("n", "<leader>wd", "<C-w>q", { desc = "Close focused window" })
 vim.keymap.set("n", "<leader>wv", "<C-w>v", { desc = "Create vertical split" })
 vim.keymap.set("n", "<leader>wh", "<C-w>h", { desc = "Create horizontal split" })
 
+vim.keymap.set("n", "<leader>bd", "<Cmd>bp|bd #<CR>", { desc = "Close buffer", silent = true })
+
 vim.keymap.set("n", "<leader>ca", "<Cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "Code actions", silent = true })

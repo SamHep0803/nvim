@@ -4,13 +4,13 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
-	config = function ()
+	config = function()
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
 
 		telescope.setup({
 			defaults = {
-				path_display = {"truncate "},
+				path_display = { "truncate " },
 				mappings = {
 					i = {
 						["<C-k>"] = actions.move_selection_previous,
@@ -23,13 +23,10 @@ return {
 
 		local keymap = vim.keymap
 
-		keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>",  { desc = "Fuzzy find files in cwd" })
-		keymap.set("n", "<leader><leader>", "<cmd>Telescope find_files<CR>",  { desc = "Fuzzy find files in cwd" })
-		keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<CR>",  { desc = "Fuzzy find recent files" })
-		keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<CR>",  { desc = "Find string in cwd" })
-
+		keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Fuzzy find files in cwd" })
+		keymap.set("n", "<leader><leader>", "<cmd>Telescope find_files<CR>", { desc = "Fuzzy find files in cwd" })
+		keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<CR>", { desc = "Fuzzy find recent files" })
+		keymap.set("n", "<leader>/", "<cmd>Telescope live_grep<CR>", { desc = "Find string in cwd" })
+		keymap.set("n", "<leader>bb", "<cmd>Telescope buffers<CR>", { desc = "Switch buffers" })
 	end
 }
-
-
-
