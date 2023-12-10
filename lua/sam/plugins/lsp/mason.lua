@@ -26,7 +26,8 @@ return {
 				"lua_ls",
 				"emmet_ls",
 				"prismals",
-				"pyright"
+				"pyright",
+				"jsonls"
 			},
 			automatic_installation = true
 		})

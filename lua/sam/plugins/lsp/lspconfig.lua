@@ -100,6 +100,11 @@ return {
 			end,
 		})
 
+		lspconfig["svelte"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach
+		})
+
 		-- configure css server
 		lspconfig["cssls"].setup({
 			capabilities = capabilities,
@@ -127,6 +132,11 @@ return {
 		lspconfig["pyright"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+		})
+
+		lspconfig["jsonls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach
 		})
 
 		lspconfig["lua_ls"].setup({
