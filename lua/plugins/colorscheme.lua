@@ -2,11 +2,9 @@ return {
   {
     "catppuccin/nvim",
     opts = function(_, opts)
-      local module = require("catppuccin.groups.integrations.bufferline")
-      if module then
-        module.get = module.get_theme
+      if (vim.g.colors_name or ""):find("catppuccin") then
+        opts.highlights = require("catppuccin.special.bufferline").get_theme()
       end
-      return opts
     end,
   },
 
