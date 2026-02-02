@@ -2,7 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 vim.keymap.set("n", "<leader>ot", function()
-  Snacks.terminal(nil, { cwd = LazyVim.root() })
+  Snacks.terminal(nil, {})
 end, { desc = "Terminal (Root Dir)" })
 
 vim.keymap.set("n", "<S-Tab>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
